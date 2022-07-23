@@ -11,9 +11,9 @@ def timer(function: callable, *args) -> float:
     :return: The running time of function
     """
     start_time = time.time()
-    function(arg for arg in args)
+    function(*args)
     return time.time() - start_time
 
 
 if __name__ == "__main__":
-    pass
+    print(timer(sum, list(range(10**6))))
