@@ -4,7 +4,7 @@ import time
 def timer(function: callable, *args) -> float:
     """
     A function that receives a function and other parameters.
-    The function measure how long a function function ran when the same
+    The function measure how long the function received ran when the same
     parameters are passed to it.
     :param function: A function that will measure its running time.
     :param args: Parameters for the measured function.
