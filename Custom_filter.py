@@ -7,12 +7,18 @@ def my_filter(function: callable, iterable: iter) -> iter:
     :param iterable: Iterable
     :return: Iterable of filtered item.
     """
-    filtered = []
-    for item in iterable:
-        if function(item):
-            filtered.append(item)
-    return iter(filtered)
+    return iter([item for item in iterable if function(item)])
+
+
+def is_mature(age: float) -> bool:
+    """
+    The function receives an age and checks if the age is over 18.
+    :param age: An float number.
+    :return: "True" if mature "False" if not.
+    """
+    return age >= 18
 
 
 if __name__ == "__main__":
-    pass
+    ages = [0, 1, 4, 10, 20, 35, 56, 84, 120]
+    print(list(my_filter(is_mature, ages)))
