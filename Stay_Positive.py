@@ -1,10 +1,13 @@
 def get_positive_numbers(list_of_str_numbers: list) -> list:
     """
-    A function that receives input from the user using input.
-    User n will be asked to enter a series of numbers separated by a comma.
-    The function will return all the positive numbers that the user entered,
-    as a list of int numbers.
+    The function receives a list of strings of numbers.
+    The function converts the strings of numbers to integers and returns
+    a list of the positive numbers from the list of numbers that the function
+    converted to integers.
+    :param list_of_str_numbers: A list of strings of numbers.
+    :return: A list of the positive numbers.
     """
+
     list_of_int_numbers = list(map(lambda num: int(num), list_of_str_numbers))
     return [num for num in list_of_int_numbers if num > 0]
 
